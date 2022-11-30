@@ -1,0 +1,147 @@
+<html lang="en">
+
+<head>
+    <title>Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="icon" type="image/x-icon" href="/Bgd/Logo.png">
+
+
+    <div id="navbar">
+        <img src="Bgd/Logo.png" style="width: 50px; height: auto; margin-left: 140px; margin-bottom: 10px">
+        <img src="Bgd/Name.png" style="width:200px; height: auto; margin-left: 10px; margin-top: 10px">
+        <a href="Work.html" style="padding-left: 40px; margin-top: 8px;padding-right: 40px; margin-right: 130px">Work</a>
+        <a href="About%20Me.html" style="padding-left: 40px; margin-top: 8px; padding-right: 40px">About</a>
+        <a href="index.html" style="padding-left: 40px; margin-top: 8px;padding-right: 40px">Home</a>
+
+    </div>
+</head>
+
+<!-- Line -->
+<hr width="90%" float="center" size="1px" color="black" style="padding-left: 10px; margin-top: 100px; opacity: 40%;">
+
+<div class="welcome">
+    <h4 style="float: center; text-align: center; font-size: 20pt;color: white; margin-top: 10px; font-family: chistoso;">Welcome to my site.</h4>
+</div>
+
+
+
+<!-- home-->
+<div class="row">
+    <div class="home">
+        <img src="Bgd/m.png" alt="Home" style="width: 400px; height: auto; margin-top: 20px; float: right; margin-right: 15%; margin-bottom: 70px;">
+    </div>
+    <div class="pic">
+        <img src="Bgd/hb.png" alt="Home" style="width: 500px; margin-top: 20px; float: right; margin-right: 15%; margin-bottom: 70px;">
+        <div class="name">Chloe</div>
+        <div class="name1">Cher</div>
+        <div class="name2">Zy Xuan</div>
+    </div>
+</div>
+
+<!-- Line -->
+<hr width="90%" float="center" size="1px" color="black" style="padding-left: 10px; margin-top: 20px; opacity: 40%;">
+
+
+<!--introduction-->
+<div class="container reveal">
+    <div class="hi">
+        <p style="font-family: geosanslight; font-size: 30pt; float: center; text-align: center;margin: 80px 300px; color: black; opacity: 70%;">I am Chloe Cher Zy Xuan, a multimedia design student from Tunku Abdul Rahman University of Management and Technology. </p>
+    </div>
+    <div class="none">
+        <a href="About%20Me.html">
+            <button class="readmore">Read More</button></a>
+    </div>
+</div>
+
+
+<!-- Line -->
+<hr width="90%" size="1px" color="transparent" style="margin-top: 30px; opacity: 40%;">
+
+
+<div class="container reveal">
+    <div class="hi">
+        <p style="font-family: chistoso; font-size: 80pt; float: center; text-align: center;margin: 0px 300px; color: white; opacity: 100%;">My Work </p>
+    </div>
+</div>
+
+<!--artwork page-->
+<div class="container reveal">
+    <div class="contain">
+        <div class="gallery-wrap">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+        </div>
+    </div>
+    <div class="section artwork">
+        <a href="Work.html">
+            <button class="artworkbtn">See More</button></a>
+    </div>
+</div>
+
+
+<!--contact link -->
+<div class="contactbar" style="margin-top: 80px; margin-bottom: 0;">
+    <a href="https://api.whatsapp.com/send?phone=601110887102" target="blank" class="Contact">
+        <img src="Bgd/whatsapp.png" alt="Whatsapp+601110887102" class="Contact" style="float: center; padding-left: 570px;"></a>
+    <a href="https://www.instagram.com/zyyxuan/" target="_blank" class="Contact">
+        <img src="Bgd/ig.png" alt="Instagram" class="Contact" style="margin-left: 20px;"></a>
+    <a href="https://www.facebook.com/xuan.zy" target="_blank" class="Fb">
+        <img src="Bgd/fb.png" alt="facebook" class="Facebook" style="width: 13px; margin-left: 20px"></a>
+    <a href="https://mail.google.com/mail/u/0/?hl=zh-CN&tf=cm&fs=1&to=zyxuan1786@gmail.com" target="_blank" class="Contact">
+        <img src="Bgd/email.png" alt="Email_zyxuan1786@gmail.com" class="Contact" style="margin-left: 20px"></a>
+</div>
+
+</html>
+<!-- Navbar fixed when scroll -->
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+</script>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+</script>
+
+<script>
+    (function() {
+        ('a[href*=#]').on('click', function(e) {
+            e.preventDefault();
+            ('html, body').animate({
+                scrollTop: ((this).attr('href')).offset().top
+            }, 500, 'linear');
+        });
+    });
+
+</script>
