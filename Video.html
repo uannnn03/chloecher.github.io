@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+    <title> Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Video.css">
+    <div id="navbar">
+        <img src="Bgd/Logo.png" style="width: 50px; height: auto; margin-left: 80px; margin-bottom: 10px">
+        <img src="Bgd/Name.png" style="width:200px; height: auto; margin-left: 10px; margin-top: 10px">
+        <a href="Work.html"
+            style="padding-left: 40px; margin-top: 8px;padding-right: 40px; margin-right: 130px">Work</a>
+        <a href="About%20Me.html" style="padding-left: 40px; margin-top: 8px; padding-right: 40px">About</a>
+        <a href="index.html" style="padding-left: 40px; margin-top: 8px;padding-right: 40px">Home</a>
+
+    </div>
+</head>
+
+<!-- Line -->
+<hr width="90%" float="center" size="1px" color="black" style="padding-left: 10px; margin-top: 150px; opacity: 100%;">
+
+<h1>Video</h1>
+
+<!-- Line -->
+<hr width="90%" float="center" size="1px" color="black" style="margin-top: -40px; opacity: 40%;">
+
+<div id="left"></div>
+
+<div id="wrapper">
+    <div id="carousel">
+        <div class="imgBlock">
+            <div id="div1"></div><img src="Design/throw.gif" alt="" class="img">
+            <div class="heartBlock">
+                <i class="far fa-heart"></i>
+                <i id="like1" class="far fa-heart"></i>
+            </div>
+        </div>
+        <div class="imgBlock"><img src="Design/eye.gif" alt="" class="img">
+            <div class="heartBlock">
+                <i class="far fa-heart"></i>
+                <i id="like2" class="far fa-heart"></i>
+            </div>
+        </div>
+        <div class="imgBlock"><img src="Design/take.gif" alt="" class="img">
+            <div class="heartBlock">
+                <i class="far fa-heart"></i>
+                <i id="like3" class="far fa-heart"></i>
+            </div>
+        </div>
+        <div class="imgBlock"><img src="Design/ready.gif" alt="" class="img">
+            <div class="heartBlock">
+                <i class="far fa-heart"></i>
+                <i id="like4" class="far fa-heart"></i>
+            </div>
+        </div>
+        <div class="imgBlock"><img src="Design/v1.gif" alt="" class="img">
+            <div class="heartBlock">
+                <i class="far fa-heart"></i>
+                <i id="like5" class="far fa-heart"></i>
+            </div>
+        </div>
+        <div class="imgBlock"><img src="Design/v2.gif" alt="" class="img">
+            <div class="heartBlock">
+                <i class="far fa-heart"></i>
+                <i id="like6" class="far fa-heart"></i>
+            </div>
+        </div>
+        <div class="imgBlock"><img src="Design/v3.gif" alt="" class="img">
+            <div class="heartBlock">
+                <i class="far fa-heart"></i>
+                <i id="like7" class="far fa-heart"></i>
+            </div>
+        </div>
+        <div class="imgBlock"><img src="Design/v4.gif" alt="" class="img">
+            <div class="heartBlock">
+                <i class="far fa-heart"></i>
+                <i id="like8" class="far fa-heart"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="right"></div>
+
+<script>
+    var d = document,
+        left = d.getElementById("left"),
+        right = d.getElementById("right"),
+        carousel = d.getElementById("carousel"),
+        heart = d.getElementsByClassName("fa-heart"),
+        deg = 0;
+    left.addEventListener("click", function () {
+        deg += 45;
+        carousel.style.transform = "rotateY(" + deg + "deg)";
+    });
+    right.addEventListener("click", function () {
+        deg -= 45;
+        carousel.style.transform = "rotateY(" + deg + "deg)";
+    });
+    for (var i = 0; i < heart.length; i++) {
+        heart[i].addEventListener("click", function () {
+            if (this.classList.contains("far")) {
+                this.classList.add("fas");
+                this.classList.remove("far");
+            } else {
+                this.classList.add("far");
+                this.classList.remove("fas");
+            }
+        });
+    }
+
+</script>

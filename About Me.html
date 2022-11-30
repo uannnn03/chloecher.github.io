@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <title> Home</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="newstyle.css">
+
+
+    <div id="navbar">
+        <img src="Bgd/Logo.png" style="width: 50px; height: auto; margin-left: 140px; margin-bottom: 10px">
+        <img src="Bgd/Name.png" style="width:200px; height: auto; margin-left: 10px; margin-top: 10px">
+        <a href="Work.html" style="padding-left: 40px; margin-top: 8px;padding-right: 40px; margin-right: 130px">Work</a>
+        <a href="About%20Me.html" style="padding-left: 40px; margin-top: 8px; padding-right: 40px">About</a>
+        <a href="index.html" style="padding-left: 40px; margin-top: 8px;padding-right: 40px">Home</a>
+
+    </div>
+</head>
+
+<!-- Line -->
+<hr width="90%" float="center" size="1px" color="black" style="padding-left: 10px; margin-top: 100px; opacity: 40%;">
+
+<h1>About Me</h1>
+
+<!-- Line -->
+<hr width="90%" float="center" size="1px" color="black" style="margin-top: -40px; opacity: 40%;">
+
+
+<div class="row1">
+    <div class="column1">
+        <div class="pic">
+            <img src="Bgd/me.png" style="width: 250%; border-radius: 50%">
+        </div>
+    </div>
+    <div class="home">
+        <div class="column2">
+            <h2>Hi, I'm Chloe!</h2>
+            <h3>So good to have you here.</h3>
+            <p style="font-family: million dreams; font-size: 25pt; margin-top: -10px; margin-left: 30%; color: black;opacity: 60%;">I am Chloe Cher Zy Xuan and I am currently studying at Tunku Abdul Rahman University of Management and Technology, taking the course of Diploma in Multimedia Design. </p>
+        </div>
+    </div>
+</div>
+
+<div class="contactbar">
+    <a href="https://api.whatsapp.com/send?phone=601110887102" target="blank" class="Contact">
+        <img src="Bgd/whatsapp.png" alt="Whatsapp+601110887102" class="Contact" style="float: center; padding-left: 550px;"></a>
+    <a href="https://www.instagram.com/zyyxuan/" target="_blank" class="Contact">
+        <img src="Bgd/ig.png" alt="Instagram" class="Contact" style="margin-left: 20px;"></a>
+    <a href="https://www.facebook.com/xuan.zy" target="_blank" class="Fb">
+        <img src="Bgd/fb.png" alt="facebook" class="Facebook" style="width: 13px; margin-left: 20px"></a>
+    <a href="https://mail.google.com/mail/u/0/?hl=zh-CN&tf=cm&fs=1&to=zyxuan1786@gmail.com" target="_blank" class="Contact">
+        <img src="Bgd/email.png" alt="Email_zyxuan1786@gmail.com" class="Contact" style="margin-left: 20px"></a>
+</div>
+
+<!-- Navbar fixed when scroll -->
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+</script>
